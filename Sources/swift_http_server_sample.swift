@@ -1,4 +1,6 @@
-struct swift_http_server_sample {
+import Curassow
+import Inquiline
 
-    var text = "Hello, World!"
+server { request in
+  return Response(.Ok, contentType: "text/plain", body: "Hello World")
 }
